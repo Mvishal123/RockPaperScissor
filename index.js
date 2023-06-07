@@ -50,18 +50,23 @@ class Game {
   }
 
   updateDisplay(playerMove, computerMove) {
+    if(this.status !== '-'){
     userOutput.innerText = playerMove;
     computerOutput.innerText = computerMove;
+    }
     playerScoreBoard.innerText = this.playerScore;
     computerScoreBoard.innerText = this.computerScore;
 
     this.updateStatus();
+    if(this.status !== '-'){
     this.sound();
+    };
 
     setTimeout((function(){
-        userOutput.innerText = '';
-        computerOutput.innerText = '';
+        userOutput.innerText = '-';
+        computerOutput.innerText = '-';
         this.status = '-';
+        gameStatus.innerText = '-';
     }), 2000);
   }
 }
@@ -75,6 +80,12 @@ const computerOutput = document.querySelector(".computer-output");
 const playerScoreBoard = document.querySelector(".player-score");
 const computerScoreBoard = document.querySelector(".computer-score");
 const gameStatus = document.querySelector('.status');
+const clearBtn = document.querySelector('.clear-btn');
+
+clearBtn.addEventListener('click', () => {
+  rps.clear();
+  rps.updateDisplay();
+})
 
 playerMoves.forEach((move) => {
   move.addEventListener("click", (e) => {
