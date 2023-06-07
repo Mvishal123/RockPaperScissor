@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+      <header>
+        <h1 class="game-title">Rock - Paper - Scissor</h1>
+      </header>
+      <div class="game-space">
+        <div class="player-console player-computer">
+          <div class="move-options">
+            <img src="./Media/rock.png">
+          </div>
+          <div class="move-options">
+            <img src="./Media/paper.png">
+          </div>
+          <div class="move-options">
+            <img src="./Media/scissor.png">
+          </div>
+        </div>
+        <div class="result-screen">
+          <div class="output">
+            <span>
+              <h3>Player output</h3>
+              <div class="user-output">-</div>
+            </span>
+            <span>
+              <h3>Computer output</h3>
+              <div class="computer-output">-</div>
+            </span>
+          </div>
+
+          <div class="score">
+            <h2 class="status">move</h2>
+            <div class="score-card">
+              <span>
+                <h3>Player</h3>
+                <div class="player-score score-display"><p>0</p></div>
+              </span>
+              <span>
+                <h3>Computer</h3>
+                <div class="computer-score score-display"><p>0</p></div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="player-console player-human">
+          <div class="move-options player-move" >
+            <img src="./Media/rock.png" id="rock">
+          </div>
+          <div class="move-options player-move" >
+            <img src="./Media/paper.png"  id="paper">
+          </div>
+          <div class="move-options player-move">
+            <img src="./Media/scissor.png" id="scissor">
+          </div>
+        </div>
+        <div class="clear">
+        <button class="clear-btn">Clear score </button>
+        </div>
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
